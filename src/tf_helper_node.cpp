@@ -27,6 +27,7 @@ int main(int argc, char **argv)
     ROS_ERROR("rate not exist");
     return 0;
   }
+
   ros::Rate lp(rate);
   
   
