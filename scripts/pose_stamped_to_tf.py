@@ -11,7 +11,7 @@ def callback(data):
     br = tf2_ros.TransformBroadcaster()
     t = geometry_msgs.msg.TransformStamped()
 
-    t.header.stamp = data.header.stamp
+    t.header.stamp = rospy.Time.now()
     t.header.frame_id = data.header.frame_id
     t.child_frame_id = "fixed"
     t.transform.translation.x = data.pose.position.x
